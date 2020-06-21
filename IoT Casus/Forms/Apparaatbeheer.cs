@@ -16,5 +16,10 @@ namespace IoT_Casus.Forms
         {
             InitializeComponent();
         }
+
+        private void ApparaatBeheerWelkomLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
