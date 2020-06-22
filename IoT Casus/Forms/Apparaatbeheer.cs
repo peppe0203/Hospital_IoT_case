@@ -54,11 +54,12 @@ namespace IoT_Casus.Forms
         {
             //IDx Uit database: Max idx + 1
             //Need Domoticz/Database
+            //voeg toe de add query en de variablen
             string QueryUrl = "";
             using (WebClient webClient = new WebClient())
             {
+                //voeg toe de add query en de variablen
                 string json = webClient.DownloadString(QueryUrl);
-                var Room = JsonConvert.DeserializeObject<DeviceList>(json);
             }
         }
 
