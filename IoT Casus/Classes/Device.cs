@@ -8,9 +8,6 @@ namespace IoT_Casus
 {
     class Device
     {
-        public int idx { get; set; }
-        public string Name { get; set; }
-        public int PlanID { get; set; }
-        public string Status { get; set; }
+        //device variablen toevoegen als database er is
     }
 }
