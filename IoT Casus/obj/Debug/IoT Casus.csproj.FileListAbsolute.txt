@@ -1,0 +1,6 @@
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csprojAssemblyReference.cache
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.DeleteDeviceButton.resources
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Form1.resources
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.PatiëntBeheer.resources
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Properties.Resources.resources
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csproj.GenerateResource.cache

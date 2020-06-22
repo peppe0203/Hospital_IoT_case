@@ -1,6 +1,6 @@
 ﻿namespace IoT_Casus.Forms
 {
-    partial class Apparaatbeheer
+    partial class DeleteDeviceButton
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,10 @@
             this.ApparaatToevoegenTbx = new System.Windows.Forms.TextBox();
             this.VeranderenApparaatGegevensBtn = new System.Windows.Forms.Button();
             this.ApparaatPatiëntBtn = new System.Windows.Forms.Button();
-            this.ToevoegenApparaatBtn = new System.Windows.Forms.Button();
+            this.AddDeviceButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ApparaatBeheerWelkomLbl = new System.Windows.Forms.Label();
+            this.ToggleButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             this.VeranderApparaatGegeven3Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.VeranderApparaatGegeven3Tbx.Location = new System.Drawing.Point(340, 409);
-            this.VeranderApparaatGegeven3Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VeranderApparaatGegeven3Tbx.Margin = new System.Windows.Forms.Padding(2);
             this.VeranderApparaatGegeven3Tbx.Name = "VeranderApparaatGegeven3Tbx";
             this.VeranderApparaatGegeven3Tbx.Size = new System.Drawing.Size(192, 20);
             this.VeranderApparaatGegeven3Tbx.TabIndex = 30;
@@ -54,7 +55,7 @@
             // 
             this.VeranderApparaatGegeven2Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.VeranderApparaatGegeven2Tbx.Location = new System.Drawing.Point(340, 385);
-            this.VeranderApparaatGegeven2Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VeranderApparaatGegeven2Tbx.Margin = new System.Windows.Forms.Padding(2);
             this.VeranderApparaatGegeven2Tbx.Name = "VeranderApparaatGegeven2Tbx";
             this.VeranderApparaatGegeven2Tbx.Size = new System.Drawing.Size(192, 20);
             this.VeranderApparaatGegeven2Tbx.TabIndex = 29;
@@ -63,7 +64,7 @@
             // 
             this.VeranderApparaatGegeven1Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.VeranderApparaatGegeven1Tbx.Location = new System.Drawing.Point(340, 361);
-            this.VeranderApparaatGegeven1Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VeranderApparaatGegeven1Tbx.Margin = new System.Windows.Forms.Padding(2);
             this.VeranderApparaatGegeven1Tbx.Name = "VeranderApparaatGegeven1Tbx";
             this.VeranderApparaatGegeven1Tbx.Size = new System.Drawing.Size(192, 20);
             this.VeranderApparaatGegeven1Tbx.TabIndex = 28;
@@ -72,7 +73,7 @@
             // 
             this.VeranderApparaatGegeven4Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.VeranderApparaatGegeven4Tbx.Location = new System.Drawing.Point(340, 433);
-            this.VeranderApparaatGegeven4Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VeranderApparaatGegeven4Tbx.Margin = new System.Windows.Forms.Padding(2);
             this.VeranderApparaatGegeven4Tbx.Name = "VeranderApparaatGegeven4Tbx";
             this.VeranderApparaatGegeven4Tbx.Size = new System.Drawing.Size(192, 20);
             this.VeranderApparaatGegeven4Tbx.TabIndex = 27;
@@ -81,7 +82,7 @@
             // 
             this.ApparaatToevoegenTbx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ApparaatToevoegenTbx.Location = new System.Drawing.Point(340, 26);
-            this.ApparaatToevoegenTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ApparaatToevoegenTbx.Margin = new System.Windows.Forms.Padding(2);
             this.ApparaatToevoegenTbx.Name = "ApparaatToevoegenTbx";
             this.ApparaatToevoegenTbx.Size = new System.Drawing.Size(192, 20);
             this.ApparaatToevoegenTbx.TabIndex = 26;
@@ -105,15 +106,15 @@
             this.ApparaatPatiëntBtn.UseVisualStyleBackColor = true;
             this.ApparaatPatiëntBtn.Click += new System.EventHandler(this.ApparaatPatiëntBtn_Click);
             // 
-            // ToevoegenApparaatBtn
+            // AddDeviceButton
             // 
-            this.ToevoegenApparaatBtn.Location = new System.Drawing.Point(341, 77);
-            this.ToevoegenApparaatBtn.Name = "ToevoegenApparaatBtn";
-            this.ToevoegenApparaatBtn.Size = new System.Drawing.Size(75, 23);
-            this.ToevoegenApparaatBtn.TabIndex = 23;
-            this.ToevoegenApparaatBtn.Text = "Toevoegen";
-            this.ToevoegenApparaatBtn.UseVisualStyleBackColor = true;
-            this.ToevoegenApparaatBtn.Click += new System.EventHandler(this.ToevoegenApparaatBtn_Click);
+            this.AddDeviceButton.Location = new System.Drawing.Point(341, 77);
+            this.AddDeviceButton.Name = "AddDeviceButton";
+            this.AddDeviceButton.Size = new System.Drawing.Size(75, 23);
+            this.AddDeviceButton.TabIndex = 23;
+            this.AddDeviceButton.Text = "Toevoegen";
+            this.AddDeviceButton.UseVisualStyleBackColor = true;
+            this.AddDeviceButton.Click += new System.EventHandler(this.AddDeviceButton_Click);
             // 
             // dataGridView1
             // 
@@ -134,11 +135,22 @@
             this.ApparaatBeheerWelkomLbl.Text = "Hier kunt u de apparaten in het systeem beheren";
             this.ApparaatBeheerWelkomLbl.Click += new System.EventHandler(this.ApparaatBeheerWelkomLbl_Click);
             // 
-            // Apparaatbeheer
+            // ToggleButton
+            // 
+            this.ToggleButton.Location = new System.Drawing.Point(340, 123);
+            this.ToggleButton.Name = "ToggleButton";
+            this.ToggleButton.Size = new System.Drawing.Size(75, 23);
+            this.ToggleButton.TabIndex = 32;
+            this.ToggleButton.Text = "Aan/Uit";
+            this.ToggleButton.UseVisualStyleBackColor = true;
+            this.ToggleButton.Click += new System.EventHandler(this.ToggleButton_Click);
+            // 
+            // DeleteDeviceButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 463);
+            this.Controls.Add(this.ToggleButton);
             this.Controls.Add(this.ApparaatBeheerWelkomLbl);
             this.Controls.Add(this.VeranderApparaatGegeven3Tbx);
             this.Controls.Add(this.VeranderApparaatGegeven2Tbx);
@@ -147,9 +159,9 @@
             this.Controls.Add(this.ApparaatToevoegenTbx);
             this.Controls.Add(this.VeranderenApparaatGegevensBtn);
             this.Controls.Add(this.ApparaatPatiëntBtn);
-            this.Controls.Add(this.ToevoegenApparaatBtn);
+            this.Controls.Add(this.AddDeviceButton);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Apparaatbeheer";
+            this.Name = "DeleteDeviceButton";
             this.Text = "Apparaatbeheer";
             this.Load += new System.EventHandler(this.Apparaatbeheer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -167,8 +179,9 @@
         private System.Windows.Forms.TextBox ApparaatToevoegenTbx;
         private System.Windows.Forms.Button VeranderenApparaatGegevensBtn;
         private System.Windows.Forms.Button ApparaatPatiëntBtn;
-        private System.Windows.Forms.Button ToevoegenApparaatBtn;
+        private System.Windows.Forms.Button AddDeviceButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label ApparaatBeheerWelkomLbl;
+        private System.Windows.Forms.Button ToggleButton;
     }
 }
