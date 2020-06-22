@@ -1,6 +1,6 @@
 ﻿namespace IoT_Casus.Forms
 {
-    partial class DeleteDeviceButton
+    partial class DeviceManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             this.VeranderApparaatGegeven4Tbx = new System.Windows.Forms.TextBox();
             this.ApparaatToevoegenTbx = new System.Windows.Forms.TextBox();
             this.VeranderenApparaatGegevensBtn = new System.Windows.Forms.Button();
-            this.ApparaatPatiëntBtn = new System.Windows.Forms.Button();
+            this.DeviceDeleteButton = new System.Windows.Forms.Button();
             this.AddDeviceButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ApparaatBeheerWelkomLbl = new System.Windows.Forms.Label();
@@ -96,15 +96,15 @@
             this.VeranderenApparaatGegevensBtn.Text = "Veranderen";
             this.VeranderenApparaatGegevensBtn.UseVisualStyleBackColor = true;
             // 
-            // ApparaatPatiëntBtn
+            // DeviceDeleteButton
             // 
-            this.ApparaatPatiëntBtn.Location = new System.Drawing.Point(457, 77);
-            this.ApparaatPatiëntBtn.Name = "ApparaatPatiëntBtn";
-            this.ApparaatPatiëntBtn.Size = new System.Drawing.Size(75, 23);
-            this.ApparaatPatiëntBtn.TabIndex = 24;
-            this.ApparaatPatiëntBtn.Text = "Verwijderen";
-            this.ApparaatPatiëntBtn.UseVisualStyleBackColor = true;
-            this.ApparaatPatiëntBtn.Click += new System.EventHandler(this.ApparaatPatiëntBtn_Click);
+            this.DeviceDeleteButton.Location = new System.Drawing.Point(457, 77);
+            this.DeviceDeleteButton.Name = "DeviceDeleteButton";
+            this.DeviceDeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeviceDeleteButton.TabIndex = 24;
+            this.DeviceDeleteButton.Text = "Verwijderen";
+            this.DeviceDeleteButton.UseVisualStyleBackColor = true;
+            this.DeviceDeleteButton.Click += new System.EventHandler(this.DeviceDeleteButton_Click);
             // 
             // AddDeviceButton
             // 
@@ -145,7 +145,7 @@
             this.ToggleButton.UseVisualStyleBackColor = true;
             this.ToggleButton.Click += new System.EventHandler(this.ToggleButton_Click);
             // 
-            // DeleteDeviceButton
+            // DeviceManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,10 +158,10 @@
             this.Controls.Add(this.VeranderApparaatGegeven4Tbx);
             this.Controls.Add(this.ApparaatToevoegenTbx);
             this.Controls.Add(this.VeranderenApparaatGegevensBtn);
-            this.Controls.Add(this.ApparaatPatiëntBtn);
+            this.Controls.Add(this.DeviceDeleteButton);
             this.Controls.Add(this.AddDeviceButton);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "DeleteDeviceButton";
+            this.Name = "DeviceManagement";
             this.Text = "Apparaatbeheer";
             this.Load += new System.EventHandler(this.Apparaatbeheer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -178,7 +178,7 @@
         private System.Windows.Forms.TextBox VeranderApparaatGegeven4Tbx;
         private System.Windows.Forms.TextBox ApparaatToevoegenTbx;
         private System.Windows.Forms.Button VeranderenApparaatGegevensBtn;
-        private System.Windows.Forms.Button ApparaatPatiëntBtn;
+        private System.Windows.Forms.Button DeviceDeleteButton;
         private System.Windows.Forms.Button AddDeviceButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label ApparaatBeheerWelkomLbl;

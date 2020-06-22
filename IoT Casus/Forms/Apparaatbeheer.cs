@@ -12,9 +12,9 @@ using Newtonsoft.Json;
 
 namespace IoT_Casus.Forms
 {
-    public partial class DeleteDeviceButton : Form
+    public partial class DeviceManagement : Form
     {
-        public DeleteDeviceButton()
+        public DeviceManagement()
         {
             InitializeComponent();
         }
@@ -72,7 +72,7 @@ namespace IoT_Casus.Forms
 
         }
 
-        private void ApparaatPatiëntBtn_Click(object sender, EventArgs e)
+        private void DeviceDeleteButton_Click(object sender, EventArgs e)
         {
 
         }
