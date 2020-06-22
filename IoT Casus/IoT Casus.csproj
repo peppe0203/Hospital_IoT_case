@@ -69,6 +69,9 @@
     <EmbeddedResource Include="Forms\Apparaatbeheer.resx">
       <DependentUpon>Apparaatbeheer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainPage.aa.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
