@@ -5,14 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using IoT_Casus.Classes;
+using System.Windows.Forms;
 
 namespace IoT_Casus
 {
     class DAL
     {
-        public static string connectionString = "Data Source =.; Initial Catalog = Hospital_B2D4; Integrated Security = True;";
+        public static string connectionString = "Data Source =.; Initial Catalog =Hospital_B2D4; Integrated Security = True;";
         public List<Device> AllDevices = new List<Device>();
         public List<User> Allusers = new List<User>();
+        public int SessionScreen = 0;
 
         public DAL()
         {
@@ -44,7 +46,7 @@ namespace IoT_Casus
             }
         }
 
-        public void RetrieveAllUsers()
+        public void RetrieveAllUsers(string UserName)
         {
             Allusers.Clear();
 
@@ -55,17 +57,41 @@ namespace IoT_Casus
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     cmd.Connection = cnn;
-                    cmd.CommandText = "SELECT userId, userName, userRoleId, userRoomId, userFloorId, password FROM Users_table";
+                    cmd.CommandText = "SELECT userId, userName, userRoleId, userRoomId, userFloorId, password FROM Users_table WHERE userName = @UserName";
+                    cmd.Parameters.AddWithValue("@userName", UserName);                    
                     using (SqlDataReader dataReader = cmd.ExecuteReader())
                     {
                         while (dataReader.Read())
                         {
-                            Allusers.Add(new User());
-                            //Bijvoegen alle waardes van user en user class vullen
+                            Allusers.Add(new User(Int32.Parse(dataReader[0].ToString()),
+                                dataReader[1].ToString(),
+                                Int32.Parse(dataReader[2].ToString()),
+                                Int32.Parse(dataReader[3].ToString()),
+                                Int32.Parse(dataReader[4].ToString()),
+                                dataReader[5].ToString()));
                         }
                     }
-                }
+                }                
                 cnn.Close();
+                try
+                {
+                    var message = string.Join(Environment.NewLine, Allusers[0]);                    
+                    if (Allusers[0]._userRoleId == 1)
+                    {
+                        MessageBox.Show("Logged in patiënt");
+                        SessionScreen = 1;
+                    }
+                    if (Allusers[0]._userRoleId == 2)
+                    {
+                        MessageBox.Show("Logged in worker");
+                        SessionScreen = 2;
+                    }
+                    
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("invalide name");
+                }
             }
         }
     }

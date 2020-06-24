@@ -30,3 +30,7 @@ C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\aa\IoT Casus.resources.dll
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csproj.CopyComplete
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.exe
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.pdb
+C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.dll
+C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.xml
