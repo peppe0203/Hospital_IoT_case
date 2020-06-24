@@ -15,6 +15,10 @@ namespace IoT_Casus.Forms
     {
         DAL ThisDAL = new DAL();
 
+        int TogMove;
+        int MValX;
+        int MValY;
+
         public PatiëntBeheer()
         {
             InitializeComponent();
@@ -67,5 +71,27 @@ namespace IoT_Casus.Forms
             FloorIdTBX.Text = "";
             PasswordTBX.Text = "";
         }
+
+        //Allows to move the page --BEGIN--
+        private void panel4_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            TogMove = 1;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+
+        private void panel4_MouseUp(object sender, MouseEventArgs e)
+        {
+            TogMove = 0;
+        }
+
+        private void panel4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TogMove == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
+        }
+        //Allows to moe the page --END--
     }
 }
