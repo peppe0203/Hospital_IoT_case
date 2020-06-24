@@ -46,6 +46,7 @@ namespace IoT_Casus
             }
         }
 
+        //Used when logging in (searches if the name is in de DB and if the user is patient or worker)
         public void RetrieveLoginUsers(string UserName)
         {
             Allusers.Clear();
@@ -93,6 +94,7 @@ namespace IoT_Casus
             }
         }
 
+        //Used to display al patiens of the hospital in the datagrid
         public void RetrieveAllPatiens()
         {
             Allusers.Clear();
@@ -121,6 +123,51 @@ namespace IoT_Casus
             }
         }
 
+        // Used to see if there is a patient whit a specific name
+        public void SearchPatient(string UserName)
+        {
+            Allusers.Clear();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    cmd.Connection = cnn;
+                    cmd.CommandText = "SELECT userId, userName, userRoleId, userRoomId, userFloorId, password FROM Users_table WHERE userRoleId = 1 AND userName LIKE '%' + @UserName + '%'";
+                    cmd.Parameters.AddWithValue("@userName", UserName);
+                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            Allusers.Add(new User(Int32.Parse(dataReader[0].ToString()),
+                                dataReader[1].ToString(),
+                                Int32.Parse(dataReader[2].ToString()),
+                                Int32.Parse(dataReader[3].ToString()),
+                                Int32.Parse(dataReader[4].ToString()),
+                                dataReader[5].ToString()));
+                        }
+                    }
+                }
+                cnn.Close();
+            }
+        }
 
+        public void DeletePatient(string UserId)
+        {
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    cmd.Connection = cnn;
+                    cmd.CommandText = "DELETE FROM Users_table WHERE userId = @UserId";
+                    cmd.Parameters.AddWithValue("@userId", UserId);
+                    cmd.ExecuteNonQuery();
+                }
+                cnn.Close();
+            }
+        }
     }
 }

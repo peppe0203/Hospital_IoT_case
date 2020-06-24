@@ -27,19 +27,32 @@ namespace IoT_Casus.Forms
             table.Columns.Add("userName", typeof(string));
             table.Columns.Add("userRoleId", typeof(int));
             table.Columns.Add("userRoomId", typeof(int));
-            table.Columns.Add("userFloorId", typeof(int));
+            //table.Columns.Add("userFloorId", typeof(int));
             table.Columns.Add("password", typeof(string));
             foreach (User User in ThisDAL.Allusers)
             {
-                table.Rows.Add(User._userId, User._userName, User._userRoleId, User._userRoomId ,User._userFloorId, User._password);
+                table.Rows.Add(User._userId, User._userName, User._userRoleId, User._userRoomId, User._password);
             }
-
             dataGridView1.DataSource = table;
             dataGridView1.Refresh();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ThisDAL.RetrieveAllPatiens();
+            refresh_DataGridPatiens();
+            PatiëntSearchTBX.Text = "";
+        }
+
+        private void SearchName_Click(object sender, EventArgs e)
+        {
+            ThisDAL.SearchPatient(PatiëntSearchTBX.Text);
+            refresh_DataGridPatiens();
+        }
+
+        private void RemovePatient_Click(object sender, EventArgs e)
+        {
+            ThisDAL.DeletePatient(DeletePatientTBX.Text);
             ThisDAL.RetrieveAllPatiens();
             refresh_DataGridPatiens();
         }

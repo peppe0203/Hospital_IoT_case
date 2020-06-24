@@ -15,6 +15,10 @@ namespace IoT_Casus
     {
         DAL ThisDAL = new DAL();
 
+        int TogMove;
+        int MValX;
+        int MValY;
+
         public Form1()
         {
             InitializeComponent();
@@ -40,5 +44,27 @@ namespace IoT_Casus
             }
 
         }
+
+        //Allows to move the page --BEGIN--
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            TogMove = 1;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+
+        private void panel3_MouseUp(object sender, MouseEventArgs e)
+        {
+            TogMove = 0;
+        }
+
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TogMove == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
+        }
+        //Allows to moe the page --END--
     }
 }
