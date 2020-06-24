@@ -31,16 +31,21 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SearchName = new System.Windows.Forms.Button();
             this.RemovePatient = new System.Windows.Forms.Button();
-            this.VeranderenPatiëntGegevensBtn = new System.Windows.Forms.Button();
+            this.AddPatient = new System.Windows.Forms.Button();
             this.PatiëntSearchTBX = new System.Windows.Forms.TextBox();
-            this.VeranderPatiëntGegeven4Tbx = new System.Windows.Forms.TextBox();
             this.DeletePatientTBX = new System.Windows.Forms.TextBox();
-            this.VeranderPatiëntGegeven2Tbx = new System.Windows.Forms.TextBox();
-            this.VeranderPatiëntGegeven3Tbx = new System.Windows.Forms.TextBox();
+            this.PatientNameTBX = new System.Windows.Forms.TextBox();
+            this.RoomIdTBX = new System.Windows.Forms.TextBox();
             this.PatiëntBeheerWelkomLbl = new System.Windows.Forms.Label();
             this.LoadPatiens = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.FloorIdTBX = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.PasswordTBX = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +72,7 @@
             // 
             // RemovePatient
             // 
-            this.RemovePatient.Location = new System.Drawing.Point(334, 332);
+            this.RemovePatient.Location = new System.Drawing.Point(334, 310);
             this.RemovePatient.Margin = new System.Windows.Forms.Padding(4);
             this.RemovePatient.Name = "RemovePatient";
             this.RemovePatient.Size = new System.Drawing.Size(100, 28);
@@ -76,15 +81,16 @@
             this.RemovePatient.UseVisualStyleBackColor = true;
             this.RemovePatient.Click += new System.EventHandler(this.RemovePatient_Click);
             // 
-            // VeranderenPatiëntGegevensBtn
+            // AddPatient
             // 
-            this.VeranderenPatiëntGegevensBtn.Location = new System.Drawing.Point(716, 527);
-            this.VeranderenPatiëntGegevensBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.VeranderenPatiëntGegevensBtn.Name = "VeranderenPatiëntGegevensBtn";
-            this.VeranderenPatiëntGegevensBtn.Size = new System.Drawing.Size(100, 28);
-            this.VeranderenPatiëntGegevensBtn.TabIndex = 3;
-            this.VeranderenPatiëntGegevensBtn.Text = "Veranderen";
-            this.VeranderenPatiëntGegevensBtn.UseVisualStyleBackColor = true;
+            this.AddPatient.Location = new System.Drawing.Point(334, 470);
+            this.AddPatient.Margin = new System.Windows.Forms.Padding(4);
+            this.AddPatient.Name = "AddPatient";
+            this.AddPatient.Size = new System.Drawing.Size(100, 28);
+            this.AddPatient.TabIndex = 3;
+            this.AddPatient.Text = "Add patient";
+            this.AddPatient.UseVisualStyleBackColor = true;
+            this.AddPatient.Click += new System.EventHandler(this.AddPatient_Click);
             // 
             // PatiëntSearchTBX
             // 
@@ -95,41 +101,32 @@
             this.PatiëntSearchTBX.Size = new System.Drawing.Size(196, 22);
             this.PatiëntSearchTBX.TabIndex = 17;
             // 
-            // VeranderPatiëntGegeven4Tbx
-            // 
-            this.VeranderPatiëntGegeven4Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven4Tbx.Location = new System.Drawing.Point(453, 530);
-            this.VeranderPatiëntGegeven4Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VeranderPatiëntGegeven4Tbx.Name = "VeranderPatiëntGegeven4Tbx";
-            this.VeranderPatiëntGegeven4Tbx.Size = new System.Drawing.Size(255, 22);
-            this.VeranderPatiëntGegeven4Tbx.TabIndex = 18;
-            // 
             // DeletePatientTBX
             // 
             this.DeletePatientTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.DeletePatientTBX.Location = new System.Drawing.Point(118, 335);
+            this.DeletePatientTBX.Location = new System.Drawing.Point(118, 313);
             this.DeletePatientTBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeletePatientTBX.Name = "DeletePatientTBX";
             this.DeletePatientTBX.Size = new System.Drawing.Size(196, 22);
             this.DeletePatientTBX.TabIndex = 19;
             // 
-            // VeranderPatiëntGegeven2Tbx
+            // PatientNameTBX
             // 
-            this.VeranderPatiëntGegeven2Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven2Tbx.Location = new System.Drawing.Point(453, 471);
-            this.VeranderPatiëntGegeven2Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VeranderPatiëntGegeven2Tbx.Name = "VeranderPatiëntGegeven2Tbx";
-            this.VeranderPatiëntGegeven2Tbx.Size = new System.Drawing.Size(255, 22);
-            this.VeranderPatiëntGegeven2Tbx.TabIndex = 20;
+            this.PatientNameTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PatientNameTBX.Location = new System.Drawing.Point(118, 408);
+            this.PatientNameTBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PatientNameTBX.Name = "PatientNameTBX";
+            this.PatientNameTBX.Size = new System.Drawing.Size(196, 22);
+            this.PatientNameTBX.TabIndex = 20;
             // 
-            // VeranderPatiëntGegeven3Tbx
+            // RoomIdTBX
             // 
-            this.VeranderPatiëntGegeven3Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven3Tbx.Location = new System.Drawing.Point(453, 501);
-            this.VeranderPatiëntGegeven3Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VeranderPatiëntGegeven3Tbx.Name = "VeranderPatiëntGegeven3Tbx";
-            this.VeranderPatiëntGegeven3Tbx.Size = new System.Drawing.Size(255, 22);
-            this.VeranderPatiëntGegeven3Tbx.TabIndex = 21;
+            this.RoomIdTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.RoomIdTBX.Location = new System.Drawing.Point(118, 450);
+            this.RoomIdTBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RoomIdTBX.Name = "RoomIdTBX";
+            this.RoomIdTBX.Size = new System.Drawing.Size(196, 22);
+            this.RoomIdTBX.TabIndex = 21;
             // 
             // PatiëntBeheerWelkomLbl
             // 
@@ -154,7 +151,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 274);
+            this.label1.Location = new System.Drawing.Point(16, 271);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 24;
@@ -163,27 +160,86 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 338);
+            this.label2.Location = new System.Drawing.Point(16, 316);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.Size = new System.Drawing.Size(72, 17);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Delete patient";
+            this.label2.Text = "ID patient:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 408);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 17);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Name patient:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 455);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Room ID:";
+            // 
+            // FloorIdTBX
+            // 
+            this.FloorIdTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.FloorIdTBX.Location = new System.Drawing.Point(118, 494);
+            this.FloorIdTBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FloorIdTBX.Name = "FloorIdTBX";
+            this.FloorIdTBX.Size = new System.Drawing.Size(196, 22);
+            this.FloorIdTBX.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 497);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 17);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Floor ID:";
+            // 
+            // PasswordTBX
+            // 
+            this.PasswordTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PasswordTBX.Location = new System.Drawing.Point(118, 533);
+            this.PasswordTBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordTBX.Name = "PasswordTBX";
+            this.PasswordTBX.Size = new System.Drawing.Size(196, 22);
+            this.PasswordTBX.TabIndex = 29;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 538);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 17);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Password:";
             // 
             // PatiëntBeheer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 570);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.PasswordTBX);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LoadPatiens);
             this.Controls.Add(this.PatiëntBeheerWelkomLbl);
-            this.Controls.Add(this.VeranderPatiëntGegeven3Tbx);
-            this.Controls.Add(this.VeranderPatiëntGegeven2Tbx);
+            this.Controls.Add(this.RoomIdTBX);
+            this.Controls.Add(this.PatientNameTBX);
             this.Controls.Add(this.DeletePatientTBX);
-            this.Controls.Add(this.VeranderPatiëntGegeven4Tbx);
+            this.Controls.Add(this.FloorIdTBX);
             this.Controls.Add(this.PatiëntSearchTBX);
-            this.Controls.Add(this.VeranderenPatiëntGegevensBtn);
+            this.Controls.Add(this.AddPatient);
             this.Controls.Add(this.RemovePatient);
             this.Controls.Add(this.SearchName);
             this.Controls.Add(this.dataGridView1);
@@ -201,15 +257,20 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button SearchName;
         private System.Windows.Forms.Button RemovePatient;
-        private System.Windows.Forms.Button VeranderenPatiëntGegevensBtn;
+        private System.Windows.Forms.Button AddPatient;
         private System.Windows.Forms.TextBox PatiëntSearchTBX;
-        private System.Windows.Forms.TextBox VeranderPatiëntGegeven4Tbx;
         private System.Windows.Forms.TextBox DeletePatientTBX;
-        private System.Windows.Forms.TextBox VeranderPatiëntGegeven2Tbx;
-        private System.Windows.Forms.TextBox VeranderPatiëntGegeven3Tbx;
+        private System.Windows.Forms.TextBox PatientNameTBX;
+        private System.Windows.Forms.TextBox RoomIdTBX;
         private System.Windows.Forms.Label PatiëntBeheerWelkomLbl;
         private System.Windows.Forms.Button LoadPatiens;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox FloorIdTBX;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox PasswordTBX;
+        private System.Windows.Forms.Label label6;
     }
 }

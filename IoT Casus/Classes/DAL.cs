@@ -78,18 +78,18 @@ namespace IoT_Casus
                     var message = string.Join(Environment.NewLine, Allusers[0]);                    
                     if (Allusers[0]._userRoleId == 1)
                     {
-                        MessageBox.Show("Logged in patiënt");
+                        MessageBox.Show("Logged in patiënt","Message");
                         SessionScreen = 1;
                     }
                     if (Allusers[0]._userRoleId == 2)
                     {
-                        MessageBox.Show("Logged in worker");
+                        MessageBox.Show("Logged in worker","Message");
                         SessionScreen = 2;
                     }                    
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("invalide name");
+                    MessageBox.Show("invalide name","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
         }
@@ -164,10 +164,43 @@ namespace IoT_Casus
                     cmd.Connection = cnn;
                     cmd.CommandText = "DELETE FROM Users_table WHERE userId = @UserId";
                     cmd.Parameters.AddWithValue("@userId", UserId);
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        string message = "Patient with ID: " + UserId + " Has been deleted";
+                        MessageBox.Show(message, "Message");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Invalide ID", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    }                    
                 }
                 cnn.Close();
+            }            
+        }
+
+        public void AddPatient(string UserName, string UserRoomId, string UserFloorId, string Password)
+        {
+            SqlConnection cnn = new SqlConnection();
+            try
+            {
+                cnn.ConnectionString = connectionString;
+                cnn.Open();
+                string sql = "INSERT INTO Users_table (userName, userRoleId, userRoomId, userFloorId, password) VALUES (@userName, 1, @userRoomId, @userFloorId, @password)";
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@userName", UserName);
+                    cmd.Parameters.AddWithValue("@userRoomId", UserRoomId);
+                    cmd.Parameters.AddWithValue("@userFloorId", UserFloorId);
+                    cmd.Parameters.AddWithValue("@password", Password);
+                    cmd.ExecuteNonQuery();
+                }                
             }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            cnn.Close();
         }
     }
 }

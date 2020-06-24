@@ -56,5 +56,16 @@ namespace IoT_Casus.Forms
             ThisDAL.RetrieveAllPatiens();
             refresh_DataGridPatiens();
         }
+
+        private void AddPatient_Click(object sender, EventArgs e)
+        {
+            ThisDAL.AddPatient(PatientNameTBX.Text, RoomIdTBX.Text, FloorIdTBX.Text, PasswordTBX.Text);
+            ThisDAL.RetrieveAllPatiens();
+            refresh_DataGridPatiens();
+            PatientNameTBX.Text = "";
+            RoomIdTBX.Text = "";
+            FloorIdTBX.Text = "";
+            PasswordTBX.Text = "";
+        }
     }
 }
