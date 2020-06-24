@@ -45,39 +45,35 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 31);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(431, 524);
+            this.dataGridView1.Size = new System.Drawing.Size(323, 426);
             this.dataGridView1.TabIndex = 0;
             // 
             // ToevoegenPatiëntBtn
             // 
-            this.ToevoegenPatiëntBtn.Location = new System.Drawing.Point(453, 60);
-            this.ToevoegenPatiëntBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ToevoegenPatiëntBtn.Location = new System.Drawing.Point(340, 49);
             this.ToevoegenPatiëntBtn.Name = "ToevoegenPatiëntBtn";
-            this.ToevoegenPatiëntBtn.Size = new System.Drawing.Size(100, 28);
+            this.ToevoegenPatiëntBtn.Size = new System.Drawing.Size(75, 23);
             this.ToevoegenPatiëntBtn.TabIndex = 1;
             this.ToevoegenPatiëntBtn.Text = "Toevoegen";
             this.ToevoegenPatiëntBtn.UseVisualStyleBackColor = true;
             // 
             // VerwijderPatiëntBtn
             // 
-            this.VerwijderPatiëntBtn.Location = new System.Drawing.Point(609, 60);
-            this.VerwijderPatiëntBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VerwijderPatiëntBtn.Location = new System.Drawing.Point(457, 49);
             this.VerwijderPatiëntBtn.Name = "VerwijderPatiëntBtn";
-            this.VerwijderPatiëntBtn.Size = new System.Drawing.Size(100, 28);
+            this.VerwijderPatiëntBtn.Size = new System.Drawing.Size(75, 23);
             this.VerwijderPatiëntBtn.TabIndex = 2;
             this.VerwijderPatiëntBtn.Text = "Verwijderen";
             this.VerwijderPatiëntBtn.UseVisualStyleBackColor = true;
             // 
             // VeranderenPatiëntGegevensBtn
             // 
-            this.VeranderenPatiëntGegevensBtn.Location = new System.Drawing.Point(716, 527);
-            this.VeranderenPatiëntGegevensBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VeranderenPatiëntGegevensBtn.Location = new System.Drawing.Point(537, 428);
             this.VeranderenPatiëntGegevensBtn.Name = "VeranderenPatiëntGegevensBtn";
-            this.VeranderenPatiëntGegevensBtn.Size = new System.Drawing.Size(100, 28);
+            this.VeranderenPatiëntGegevensBtn.Size = new System.Drawing.Size(75, 23);
             this.VeranderenPatiëntGegevensBtn.TabIndex = 3;
             this.VeranderenPatiëntGegevensBtn.Text = "Veranderen";
             this.VeranderenPatiëntGegevensBtn.UseVisualStyleBackColor = true;
@@ -85,63 +81,63 @@
             // PatiëntToevoegenTbx
             // 
             this.PatiëntToevoegenTbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PatiëntToevoegenTbx.Location = new System.Drawing.Point(453, 30);
-            this.PatiëntToevoegenTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PatiëntToevoegenTbx.Location = new System.Drawing.Point(340, 24);
+            this.PatiëntToevoegenTbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PatiëntToevoegenTbx.Name = "PatiëntToevoegenTbx";
-            this.PatiëntToevoegenTbx.Size = new System.Drawing.Size(255, 22);
+            this.PatiëntToevoegenTbx.Size = new System.Drawing.Size(192, 20);
             this.PatiëntToevoegenTbx.TabIndex = 17;
             // 
             // VeranderPatiëntGegeven4Tbx
             // 
             this.VeranderPatiëntGegeven4Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven4Tbx.Location = new System.Drawing.Point(453, 530);
-            this.VeranderPatiëntGegeven4Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VeranderPatiëntGegeven4Tbx.Location = new System.Drawing.Point(340, 431);
+            this.VeranderPatiëntGegeven4Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VeranderPatiëntGegeven4Tbx.Name = "VeranderPatiëntGegeven4Tbx";
-            this.VeranderPatiëntGegeven4Tbx.Size = new System.Drawing.Size(255, 22);
+            this.VeranderPatiëntGegeven4Tbx.Size = new System.Drawing.Size(192, 20);
             this.VeranderPatiëntGegeven4Tbx.TabIndex = 18;
             // 
             // VeranderPatiëntGegeven1Tbx
             // 
             this.VeranderPatiëntGegeven1Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven1Tbx.Location = new System.Drawing.Point(453, 442);
-            this.VeranderPatiëntGegeven1Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VeranderPatiëntGegeven1Tbx.Location = new System.Drawing.Point(340, 359);
+            this.VeranderPatiëntGegeven1Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VeranderPatiëntGegeven1Tbx.Name = "VeranderPatiëntGegeven1Tbx";
-            this.VeranderPatiëntGegeven1Tbx.Size = new System.Drawing.Size(255, 22);
+            this.VeranderPatiëntGegeven1Tbx.Size = new System.Drawing.Size(192, 20);
             this.VeranderPatiëntGegeven1Tbx.TabIndex = 19;
             // 
             // VeranderPatiëntGegeven2Tbx
             // 
             this.VeranderPatiëntGegeven2Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven2Tbx.Location = new System.Drawing.Point(453, 471);
-            this.VeranderPatiëntGegeven2Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VeranderPatiëntGegeven2Tbx.Location = new System.Drawing.Point(340, 383);
+            this.VeranderPatiëntGegeven2Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VeranderPatiëntGegeven2Tbx.Name = "VeranderPatiëntGegeven2Tbx";
-            this.VeranderPatiëntGegeven2Tbx.Size = new System.Drawing.Size(255, 22);
+            this.VeranderPatiëntGegeven2Tbx.Size = new System.Drawing.Size(192, 20);
             this.VeranderPatiëntGegeven2Tbx.TabIndex = 20;
             // 
             // VeranderPatiëntGegeven3Tbx
             // 
             this.VeranderPatiëntGegeven3Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven3Tbx.Location = new System.Drawing.Point(453, 501);
-            this.VeranderPatiëntGegeven3Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VeranderPatiëntGegeven3Tbx.Location = new System.Drawing.Point(340, 407);
+            this.VeranderPatiëntGegeven3Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VeranderPatiëntGegeven3Tbx.Name = "VeranderPatiëntGegeven3Tbx";
-            this.VeranderPatiëntGegeven3Tbx.Size = new System.Drawing.Size(255, 22);
+            this.VeranderPatiëntGegeven3Tbx.Size = new System.Drawing.Size(192, 20);
             this.VeranderPatiëntGegeven3Tbx.TabIndex = 21;
             // 
             // PatiëntBeheerWelkomLbl
             // 
             this.PatiëntBeheerWelkomLbl.AutoSize = true;
-            this.PatiëntBeheerWelkomLbl.Location = new System.Drawing.Point(16, 11);
-            this.PatiëntBeheerWelkomLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PatiëntBeheerWelkomLbl.Location = new System.Drawing.Point(12, 9);
             this.PatiëntBeheerWelkomLbl.Name = "PatiëntBeheerWelkomLbl";
-            this.PatiëntBeheerWelkomLbl.Size = new System.Drawing.Size(312, 17);
+            this.PatiëntBeheerWelkomLbl.Size = new System.Drawing.Size(233, 13);
             this.PatiëntBeheerWelkomLbl.TabIndex = 22;
             this.PatiëntBeheerWelkomLbl.Text = "Hier kunt u de patiënten in het systeem beheren";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(453, 155);
+            this.button1.Location = new System.Drawing.Point(340, 126);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 29);
+            this.button1.Size = new System.Drawing.Size(103, 24);
             this.button1.TabIndex = 23;
             this.button1.Text = "Load Patiënts";
             this.button1.UseVisualStyleBackColor = true;
@@ -149,9 +145,9 @@
             // 
             // PatiëntBeheer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 570);
+            this.ClientSize = new System.Drawing.Size(623, 463);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PatiëntBeheerWelkomLbl);
             this.Controls.Add(this.VeranderPatiëntGegeven3Tbx);
@@ -163,9 +159,9 @@
             this.Controls.Add(this.VerwijderPatiëntBtn);
             this.Controls.Add(this.ToevoegenPatiëntBtn);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PatiëntBeheer";
             this.Text = "PatiëntBeheer";
+            this.Load += new System.EventHandler(this.PatiëntBeheer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

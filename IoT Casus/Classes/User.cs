@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IoT_Casus.Classes
+namespace IoT_Casus
 {
     class User
     {
