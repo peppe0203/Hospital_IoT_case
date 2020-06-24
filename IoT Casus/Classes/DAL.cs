@@ -47,7 +47,7 @@ namespace IoT_Casus
         }
 
         //Used when logging in (searches if the name is in de DB and if the user is patient or worker)
-        public void RetrieveLoginUsers(string UserName)
+        public void RetrieveLoginUsers(string UserName, string Password)
         {
             Allusers.Clear();
             using (SqlConnection cnn = new SqlConnection(connectionString))
@@ -57,8 +57,9 @@ namespace IoT_Casus
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     cmd.Connection = cnn;
-                    cmd.CommandText = "SELECT userId, userName, userRoleId, userRoomId, userFloorId, password FROM Users_table WHERE userName = @UserName";
-                    cmd.Parameters.AddWithValue("@userName", UserName);                    
+                    cmd.CommandText = "SELECT userId, userName, userRoleId, userRoomId, userFloorId, password FROM Users_table WHERE userName = @UserName AND password = @Password";
+                    cmd.Parameters.AddWithValue("@userName", UserName);
+                    cmd.Parameters.AddWithValue("@password", Password);
                     using (SqlDataReader dataReader = cmd.ExecuteReader())
                     {
                         while (dataReader.Read())

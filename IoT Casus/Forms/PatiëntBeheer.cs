@@ -29,13 +29,13 @@ namespace IoT_Casus.Forms
             DataTable table = new DataTable();
             table.Columns.Add("userId", typeof(int));
             table.Columns.Add("userName", typeof(string));
-            table.Columns.Add("userRoleId", typeof(int));
+            //table.Columns.Add("userRoleId", typeof(int));
             table.Columns.Add("userRoomId", typeof(int));
-            //table.Columns.Add("userFloorId", typeof(int));
+            table.Columns.Add("userFloorId", typeof(int));
             table.Columns.Add("password", typeof(string));
             foreach (User User in ThisDAL.Allusers)
             {
-                table.Rows.Add(User._userId, User._userName, User._userRoleId, User._userRoomId, User._password);
+                table.Rows.Add(User._userId, User._userName, User._userRoomId, User._userFloorId ,User._password);
             }
             dataGridView1.DataSource = table;
             dataGridView1.Refresh();
@@ -93,5 +93,11 @@ namespace IoT_Casus.Forms
             }
         }
         //Allows to moe the page --END--
+
+        //Closing button in corner to stop application
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }        
     }
 }

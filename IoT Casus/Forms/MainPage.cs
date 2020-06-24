@@ -31,14 +31,16 @@ namespace IoT_Casus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ThisDAL.RetrieveLoginUsers(textBox1.Text);
+            ThisDAL.RetrieveLoginUsers(textBox1.Text,textBox2.Text);
             if (ThisDAL.SessionScreen == 1)
             {
+                this.Hide();
                 var DeviceManagement = new DeviceManagement();
                 DeviceManagement.Show();
             }
             if (ThisDAL.SessionScreen == 2)
             {
+                this.Hide();
                 var PatiëntBeheer = new PatiëntBeheer();
                 PatiëntBeheer.Show();
             }
@@ -66,5 +68,12 @@ namespace IoT_Casus
             }
         }
         //Allows to moe the page --END--
+
+        //Closing button in corner to stop application
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+        
     }
 }
