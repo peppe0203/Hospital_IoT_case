@@ -27,7 +27,7 @@ namespace IoT_Casus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ThisDAL.RetrieveAllUsers(textBox1.Text);
+            ThisDAL.RetrieveLoginUsers(textBox1.Text);
             if (ThisDAL.SessionScreen == 1)
             {
                 var DeviceManagement = new DeviceManagement();

@@ -46,10 +46,9 @@ namespace IoT_Casus
             }
         }
 
-        public void RetrieveAllUsers(string UserName)
+        public void RetrieveLoginUsers(string UserName)
         {
             Allusers.Clear();
-
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand())
@@ -85,8 +84,7 @@ namespace IoT_Casus
                     {
                         MessageBox.Show("Logged in worker");
                         SessionScreen = 2;
-                    }
-                    
+                    }                    
                 }
                 catch (Exception)
                 {
@@ -94,5 +92,35 @@ namespace IoT_Casus
                 }
             }
         }
+
+        public void RetrieveAllPatiens()
+        {
+            Allusers.Clear();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    cmd.Connection = cnn;
+                    cmd.CommandText = "SELECT userId, userName, userRoleId, userRoomId, userFloorId, password FROM Users_table WHERE userRoleId = 1";
+                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            Allusers.Add(new User(Int32.Parse(dataReader[0].ToString()),
+                                dataReader[1].ToString(),
+                                Int32.Parse(dataReader[2].ToString()),
+                                Int32.Parse(dataReader[3].ToString()),
+                                Int32.Parse(dataReader[4].ToString()),
+                                dataReader[5].ToString()));
+                        }
+                    }
+                }
+                cnn.Close();            
+            }
+        }
+
+
     }
 }
