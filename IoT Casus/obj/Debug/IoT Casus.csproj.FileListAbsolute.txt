@@ -35,3 +35,4 @@ C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.dll
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.xml
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.EmployeSelectionMenu.resources
+C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.EmployeeDevices.resources

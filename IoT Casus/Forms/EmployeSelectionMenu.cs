@@ -58,8 +58,8 @@ namespace IoT_Casus.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var DeviceManagement = new DeviceManagement();
-            DeviceManagement.Show();
+            var EmployeeDevices = new EmployeeDevices();
+            EmployeeDevices.Show();
         }
     }
 }

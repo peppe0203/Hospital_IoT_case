@@ -90,7 +90,7 @@ namespace IoT_Casus
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("invalide name","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("invalide name or password","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
         }
@@ -180,6 +180,7 @@ namespace IoT_Casus
             }            
         }
 
+        //Adding a patient to the database
         public void AddPatient(string UserName, string UserRoomId, string UserFloorId, string Password)
         {
             SqlConnection cnn = new SqlConnection();
@@ -203,5 +204,7 @@ namespace IoT_Casus
             }
             cnn.Close();
         }
+
+        //Retrieving all devices
     }
 }
