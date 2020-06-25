@@ -14,38 +14,14 @@ namespace IoT_Casus
         public static string connectionString = "Data Source =.; Initial Catalog =Hospital_B2D4; Integrated Security = True;";
         public List<Device> AllDevices = new List<Device>();
         public List<User> Allusers = new List<User>();
+
+        //So the program knows which view to open (1 patient, 2 worker, 0 none)
         public int SessionScreen = 0;
 
         public DAL()
         {
         }
-        public void RetrieveAllDevices()
-        {
-            AllDevices.Clear();
-            using (SqlConnection cnn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cnn.ConnectionString = connectionString;
-                    cnn.Open();
-                    cmd.Connection = cnn;
-                    //toevoegen query als database er is
-                    cmd.CommandText = "";
-                    using (SqlDataReader dataReader = cmd.ExecuteReader())
-                    {
-                        while (dataReader.Read())
-                        {
-                            //toevoegen variablen als database er is
-                            AllDevices.Add(new Device(
-                                                               )
-                                             );
-                        }
-                    }
-                    cnn.Close();
-                }
-            }
-        }
-
+        
         //Used when logging in (searches if the name is in de DB and if the user is patient or worker)
         public void RetrieveLoginUsers(string UserName, string Password)
         {
@@ -79,12 +55,14 @@ namespace IoT_Casus
                     var message = string.Join(Environment.NewLine, Allusers[0]);                    
                     if (Allusers[0]._userRoleId == 1)
                     {
-                        MessageBox.Show("Logged in patiënt","Message");
+                        //Turned off because of testing
+                        //MessageBox.Show("Logged in patiënt","Message");
                         SessionScreen = 1;
                     }
                     if (Allusers[0]._userRoleId == 2)
                     {
-                        MessageBox.Show("Logged in worker","Message");
+                        //Turned off because of testing
+                        //MessageBox.Show("Logged in worker","Message");
                         SessionScreen = 2;
                     }                    
                 }
@@ -206,5 +184,63 @@ namespace IoT_Casus
         }
 
         //Retrieving all devices
+        public void RetrieveAllDevicesEmploye()
+        {
+            AllDevices.Clear();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    cmd.Connection = cnn;
+                    cmd.CommandText = "SELECT deviceId, domoticzId, deviceType, deviceName, status, roomId FROM Devices_table ORDER BY deviceName";
+                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            AllDevices.Add(new Device(Int32.Parse(dataReader[0].ToString()),
+                                Int32.Parse(dataReader[1].ToString()),
+                                dataReader[2].ToString(),
+                                dataReader[3].ToString(),
+                                dataReader[4].ToString(),
+                                Int32.Parse(dataReader[5].ToString())));
+                        }
+                    }
+                }
+                cnn.Close();
+            }
+        }
+
+        // Used to see if there is a patient whit a specific name
+        public void SearchDeviceByRoom(string RoomName,string RoomNameType)
+        {
+            AllDevices.Clear();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    cmd.Connection = cnn;
+                    cmd.CommandText = "select * from Devices_table inner join Rooms_table on Devices_table.roomId = Rooms_table.roomId where roomName like '%' + @roomName + '%' and deviceName like '%' + @roomNameType + '%'"; 
+                    cmd.Parameters.AddWithValue("@roomName", RoomName);
+                    cmd.Parameters.AddWithValue("@roomNameType", RoomNameType);
+                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            AllDevices.Add(new Device(Int32.Parse(dataReader[0].ToString()),
+                                Int32.Parse(dataReader[1].ToString()),
+                                dataReader[2].ToString(),
+                                dataReader[3].ToString(),
+                                dataReader[4].ToString(),
+                                Int32.Parse(dataReader[5].ToString())));
+                        }
+                    }
+                }
+                cnn.Close();
+            }
+        }
     }
 }
