@@ -70,6 +70,12 @@
     <Compile Include="Forms\Apparaatbeheer.Designer.cs">
       <DependentUpon>Apparaatbeheer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EmployeSelectionMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeSelectionMenu.Designer.cs">
+      <DependentUpon>EmployeSelectionMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Apparaatbeheer.resx">
       <DependentUpon>Apparaatbeheer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeSelectionMenu.resx">
+      <DependentUpon>EmployeSelectionMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainPage.aa.resx">
       <DependentUpon>MainPage.cs</DependentUpon>

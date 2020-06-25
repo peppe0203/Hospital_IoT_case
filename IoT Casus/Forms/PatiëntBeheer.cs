@@ -31,12 +31,13 @@ namespace IoT_Casus.Forms
             table.Columns.Add("userName", typeof(string));
             //table.Columns.Add("userRoleId", typeof(int));
             table.Columns.Add("userRoomId", typeof(int));
-            table.Columns.Add("userFloorId", typeof(int));
+            //table.Columns.Add("userFloorId", typeof(int));
             table.Columns.Add("password", typeof(string));
             foreach (User User in ThisDAL.Allusers)
             {
-                table.Rows.Add(User._userId, User._userName, User._userRoomId, User._userFloorId ,User._password);
+                table.Rows.Add(User._userId, User._userName, User._userRoomId, User._password);
             }
+            dataGridView1.Width = 1000;
             dataGridView1.DataSource = table;
             dataGridView1.Refresh();
         }
@@ -59,6 +60,7 @@ namespace IoT_Casus.Forms
             ThisDAL.DeletePatient(DeletePatientTBX.Text);
             ThisDAL.RetrieveAllPatiens();
             refresh_DataGridPatiens();
+            DeletePatientTBX.Text = "";
         }
 
         private void AddPatient_Click(object sender, EventArgs e)
@@ -92,7 +94,7 @@ namespace IoT_Casus.Forms
                 this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
             }
         }
-        //Allows to moe the page --END--
+        //Allows to move the page --END--
 
         //Closing button in corner to stop application
         private void pictureBox2_Click(object sender, EventArgs e)
