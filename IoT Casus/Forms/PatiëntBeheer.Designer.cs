@@ -93,32 +93,32 @@
             // 
             this.PatiëntSearchTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.PatiëntSearchTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PatiëntSearchTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.PatiëntSearchTBX, "PatiëntSearchTBX");
+            this.PatiëntSearchTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PatiëntSearchTBX.Name = "PatiëntSearchTBX";
             // 
             // DeletePatientTBX
             // 
             this.DeletePatientTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.DeletePatientTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.DeletePatientTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.DeletePatientTBX, "DeletePatientTBX");
+            this.DeletePatientTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             this.DeletePatientTBX.Name = "DeletePatientTBX";
             // 
             // PatientNameTBX
             // 
             this.PatientNameTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.PatientNameTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PatientNameTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.PatientNameTBX, "PatientNameTBX");
+            this.PatientNameTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PatientNameTBX.Name = "PatientNameTBX";
             // 
             // RoomIdTBX
             // 
             this.RoomIdTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.RoomIdTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.RoomIdTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.RoomIdTBX, "RoomIdTBX");
+            this.RoomIdTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RoomIdTBX.Name = "RoomIdTBX";
             // 
             // LoadPatiens
@@ -158,8 +158,8 @@
             // 
             this.FloorIdTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.FloorIdTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.FloorIdTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.FloorIdTBX, "FloorIdTBX");
+            this.FloorIdTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             this.FloorIdTBX.Name = "FloorIdTBX";
             // 
             // label5
@@ -172,8 +172,8 @@
             // 
             this.PasswordTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.PasswordTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PasswordTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             resources.ApplyResources(this.PasswordTBX, "PasswordTBX");
+            this.PasswordTBX.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PasswordTBX.Name = "PasswordTBX";
             // 
             // label6
