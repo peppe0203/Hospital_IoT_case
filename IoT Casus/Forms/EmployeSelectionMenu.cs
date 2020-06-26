@@ -61,5 +61,13 @@ namespace IoT_Casus.Forms
             var EmployeeDevices = new EmployeeDevices();
             EmployeeDevices.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var MainPage = new Form1();
+            MainPage.Show();
+            WindowState = FormWindowState.Normal;
+        }
     }
 }

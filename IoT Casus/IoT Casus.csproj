@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Classes\Device.cs" />
     <Compile Include="Classes\DAL.cs" />
+    <Compile Include="Classes\ThreadingClass.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Forms\Apparaatbeheer.cs">
       <SubType>Form</SubType>

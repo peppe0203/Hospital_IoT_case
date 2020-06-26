@@ -100,6 +100,14 @@ namespace IoT_Casus.Forms
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
-        }        
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var EmployeSelectionMenu = new EmployeSelectionMenu();
+            EmployeSelectionMenu.Show();
+            WindowState = FormWindowState.Normal;
+        }
     }
 }
