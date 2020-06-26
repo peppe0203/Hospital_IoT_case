@@ -45,12 +45,13 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(560, 142);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(302, 275);
+            this.button1.Location = new System.Drawing.Point(342, 195);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(247, 44);
+            this.button1.Size = new System.Drawing.Size(231, 44);
             this.button1.TabIndex = 1;
             this.button1.Text = "Load devices";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,14 +59,14 @@
             // 
             // SearchByRoomTBX
             // 
-            this.SearchByRoomTBX.Location = new System.Drawing.Point(26, 484);
+            this.SearchByRoomTBX.Location = new System.Drawing.Point(385, 360);
             this.SearchByRoomTBX.Name = "SearchByRoomTBX";
             this.SearchByRoomTBX.Size = new System.Drawing.Size(168, 22);
             this.SearchByRoomTBX.TabIndex = 2;
             // 
             // SearchByRoom
             // 
-            this.SearchByRoom.Location = new System.Drawing.Point(246, 483);
+            this.SearchByRoom.Location = new System.Drawing.Point(478, 388);
             this.SearchByRoom.Name = "SearchByRoom";
             this.SearchByRoom.Size = new System.Drawing.Size(75, 23);
             this.SearchByRoom.TabIndex = 3;
@@ -82,7 +83,7 @@
             "rolluik",
             "deurslot",
             " "});
-            this.DropDownMenuTypes.Location = new System.Drawing.Point(26, 426);
+            this.DropDownMenuTypes.Location = new System.Drawing.Point(432, 330);
             this.DropDownMenuTypes.Name = "DropDownMenuTypes";
             this.DropDownMenuTypes.Size = new System.Drawing.Size(121, 24);
             this.DropDownMenuTypes.TabIndex = 4;

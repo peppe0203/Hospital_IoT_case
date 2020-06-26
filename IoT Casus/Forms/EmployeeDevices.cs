@@ -23,17 +23,19 @@ namespace IoT_Casus.Forms
         {
             DataTable table = new DataTable();
             //table.Columns.Add("deviceId", typeof(int));
-            //table.Columns.Add("domoticzId", typeof(string));
+            table.Columns.Add("domoticzId", typeof(string));
             //table.Columns.Add("deviceType", typeof(string));
             table.Columns.Add("deviceName", typeof(string));
             table.Columns.Add("status", typeof(string));
             table.Columns.Add("roomId", typeof(int));
             foreach (Device Device in ThisDAL.AllDevices)
             {
-                table.Rows.Add(Device._deviceName, Device._status, Device._roomId);
+                table.Rows.Add(Device._domoticzId, Device._deviceName, Device._status, Device._roomId);
             }            
             dataGridView1.DataSource = table;
-            dataGridView1.Columns["deviceName"].Width = 150;
+            dataGridView1.Columns["domoticzId"].Width = 75;
+            dataGridView1.Columns["deviceName"].Width = 125;
+            dataGridView1.Columns["roomId"].Width = 50;
             dataGridView1.Refresh();
         }
 
@@ -47,6 +49,16 @@ namespace IoT_Casus.Forms
         {
             ThisDAL.SearchDeviceByRoom(SearchByRoomTBX.Text,DropDownMenuTypes.Text);
             refresh_DataGridDevices();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                string test = dataGridView1.Rows[e.RowIndex].Cells["domoticzId"].FormattedValue.ToString();
+                MessageBox.Show("Domoticz " + test, "message");
+            }
         }
     }
 }
