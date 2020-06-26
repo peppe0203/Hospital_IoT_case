@@ -53,12 +53,21 @@ namespace IoT_Casus.Forms
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            try
             {
-                dataGridView1.CurrentRow.Selected = true;
-                string test = dataGridView1.Rows[e.RowIndex].Cells["domoticzId"].FormattedValue.ToString();
-                MessageBox.Show("Domoticz " + test, "message");
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dataGridView1.CurrentRow.Selected = true;
+                    string test = dataGridView1.Rows[e.RowIndex].Cells["domoticzId"].FormattedValue.ToString();
+                    MessageBox.Show("Domoticz " + test, "message");
+                }
             }
+            // if its the first row
+            catch (Exception)
+            {
+                Console.WriteLine("Not possible to get info");
+            }
+
         }
     }
 }
