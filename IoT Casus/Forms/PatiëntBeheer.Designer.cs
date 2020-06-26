@@ -28,162 +28,267 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatiëntBeheer));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ToevoegenPatiëntBtn = new System.Windows.Forms.Button();
-            this.VerwijderPatiëntBtn = new System.Windows.Forms.Button();
-            this.VeranderenPatiëntGegevensBtn = new System.Windows.Forms.Button();
-            this.PatiëntToevoegenTbx = new System.Windows.Forms.TextBox();
-            this.VeranderPatiëntGegeven4Tbx = new System.Windows.Forms.TextBox();
-            this.VeranderPatiëntGegeven1Tbx = new System.Windows.Forms.TextBox();
-            this.VeranderPatiëntGegeven2Tbx = new System.Windows.Forms.TextBox();
-            this.VeranderPatiëntGegeven3Tbx = new System.Windows.Forms.TextBox();
-            this.PatiëntBeheerWelkomLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SearchName = new System.Windows.Forms.Button();
+            this.RemovePatient = new System.Windows.Forms.Button();
+            this.AddPatient = new System.Windows.Forms.Button();
+            this.PatiëntSearchTBX = new System.Windows.Forms.TextBox();
+            this.DeletePatientTBX = new System.Windows.Forms.TextBox();
+            this.PatientNameTBX = new System.Windows.Forms.TextBox();
+            this.RoomIdTBX = new System.Windows.Forms.TextBox();
+            this.LoadPatiens = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.FloorIdTBX = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.PasswordTBX = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 31);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(431, 524);
-            this.dataGridView1.TabIndex = 0;
             // 
-            // ToevoegenPatiëntBtn
+            // SearchName
             // 
-            this.ToevoegenPatiëntBtn.Location = new System.Drawing.Point(453, 60);
-            this.ToevoegenPatiëntBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ToevoegenPatiëntBtn.Name = "ToevoegenPatiëntBtn";
-            this.ToevoegenPatiëntBtn.Size = new System.Drawing.Size(100, 28);
-            this.ToevoegenPatiëntBtn.TabIndex = 1;
-            this.ToevoegenPatiëntBtn.Text = "Toevoegen";
-            this.ToevoegenPatiëntBtn.UseVisualStyleBackColor = true;
+            this.SearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(176)))));
+            resources.ApplyResources(this.SearchName, "SearchName");
+            this.SearchName.Name = "SearchName";
+            this.SearchName.UseVisualStyleBackColor = false;
+            this.SearchName.Click += new System.EventHandler(this.SearchName_Click);
             // 
-            // VerwijderPatiëntBtn
+            // RemovePatient
             // 
-            this.VerwijderPatiëntBtn.Location = new System.Drawing.Point(609, 60);
-            this.VerwijderPatiëntBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.VerwijderPatiëntBtn.Name = "VerwijderPatiëntBtn";
-            this.VerwijderPatiëntBtn.Size = new System.Drawing.Size(100, 28);
-            this.VerwijderPatiëntBtn.TabIndex = 2;
-            this.VerwijderPatiëntBtn.Text = "Verwijderen";
-            this.VerwijderPatiëntBtn.UseVisualStyleBackColor = true;
+            this.RemovePatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(176)))));
+            resources.ApplyResources(this.RemovePatient, "RemovePatient");
+            this.RemovePatient.Name = "RemovePatient";
+            this.RemovePatient.UseVisualStyleBackColor = false;
+            this.RemovePatient.Click += new System.EventHandler(this.RemovePatient_Click);
             // 
-            // VeranderenPatiëntGegevensBtn
+            // AddPatient
             // 
-            this.VeranderenPatiëntGegevensBtn.Location = new System.Drawing.Point(716, 527);
-            this.VeranderenPatiëntGegevensBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.VeranderenPatiëntGegevensBtn.Name = "VeranderenPatiëntGegevensBtn";
-            this.VeranderenPatiëntGegevensBtn.Size = new System.Drawing.Size(100, 28);
-            this.VeranderenPatiëntGegevensBtn.TabIndex = 3;
-            this.VeranderenPatiëntGegevensBtn.Text = "Veranderen";
-            this.VeranderenPatiëntGegevensBtn.UseVisualStyleBackColor = true;
+            this.AddPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(176)))));
+            resources.ApplyResources(this.AddPatient, "AddPatient");
+            this.AddPatient.Name = "AddPatient";
+            this.AddPatient.UseVisualStyleBackColor = false;
+            this.AddPatient.Click += new System.EventHandler(this.AddPatient_Click);
             // 
-            // PatiëntToevoegenTbx
+            // PatiëntSearchTBX
             // 
-            this.PatiëntToevoegenTbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PatiëntToevoegenTbx.Location = new System.Drawing.Point(453, 30);
-            this.PatiëntToevoegenTbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PatiëntToevoegenTbx.Name = "PatiëntToevoegenTbx";
-            this.PatiëntToevoegenTbx.Size = new System.Drawing.Size(255, 22);
-            this.PatiëntToevoegenTbx.TabIndex = 17;
+            this.PatiëntSearchTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.PatiëntSearchTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.PatiëntSearchTBX, "PatiëntSearchTBX");
+            this.PatiëntSearchTBX.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.PatiëntSearchTBX.Name = "PatiëntSearchTBX";
             // 
-            // VeranderPatiëntGegeven4Tbx
+            // DeletePatientTBX
             // 
-            this.VeranderPatiëntGegeven4Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven4Tbx.Location = new System.Drawing.Point(453, 530);
-            this.VeranderPatiëntGegeven4Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VeranderPatiëntGegeven4Tbx.Name = "VeranderPatiëntGegeven4Tbx";
-            this.VeranderPatiëntGegeven4Tbx.Size = new System.Drawing.Size(255, 22);
-            this.VeranderPatiëntGegeven4Tbx.TabIndex = 18;
+            this.DeletePatientTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.DeletePatientTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.DeletePatientTBX, "DeletePatientTBX");
+            this.DeletePatientTBX.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.DeletePatientTBX.Name = "DeletePatientTBX";
             // 
-            // VeranderPatiëntGegeven1Tbx
+            // PatientNameTBX
             // 
-            this.VeranderPatiëntGegeven1Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven1Tbx.Location = new System.Drawing.Point(453, 442);
-            this.VeranderPatiëntGegeven1Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VeranderPatiëntGegeven1Tbx.Name = "VeranderPatiëntGegeven1Tbx";
-            this.VeranderPatiëntGegeven1Tbx.Size = new System.Drawing.Size(255, 22);
-            this.VeranderPatiëntGegeven1Tbx.TabIndex = 19;
+            this.PatientNameTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.PatientNameTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.PatientNameTBX, "PatientNameTBX");
+            this.PatientNameTBX.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.PatientNameTBX.Name = "PatientNameTBX";
             // 
-            // VeranderPatiëntGegeven2Tbx
+            // RoomIdTBX
             // 
-            this.VeranderPatiëntGegeven2Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven2Tbx.Location = new System.Drawing.Point(453, 471);
-            this.VeranderPatiëntGegeven2Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VeranderPatiëntGegeven2Tbx.Name = "VeranderPatiëntGegeven2Tbx";
-            this.VeranderPatiëntGegeven2Tbx.Size = new System.Drawing.Size(255, 22);
-            this.VeranderPatiëntGegeven2Tbx.TabIndex = 20;
+            this.RoomIdTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.RoomIdTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.RoomIdTBX, "RoomIdTBX");
+            this.RoomIdTBX.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.RoomIdTBX.Name = "RoomIdTBX";
             // 
-            // VeranderPatiëntGegeven3Tbx
+            // LoadPatiens
             // 
-            this.VeranderPatiëntGegeven3Tbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.VeranderPatiëntGegeven3Tbx.Location = new System.Drawing.Point(453, 501);
-            this.VeranderPatiëntGegeven3Tbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VeranderPatiëntGegeven3Tbx.Name = "VeranderPatiëntGegeven3Tbx";
-            this.VeranderPatiëntGegeven3Tbx.Size = new System.Drawing.Size(255, 22);
-            this.VeranderPatiëntGegeven3Tbx.TabIndex = 21;
+            this.LoadPatiens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(176)))));
+            this.LoadPatiens.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.LoadPatiens, "LoadPatiens");
+            this.LoadPatiens.Name = "LoadPatiens";
+            this.LoadPatiens.UseVisualStyleBackColor = false;
+            this.LoadPatiens.Click += new System.EventHandler(this.button1_Click);
             // 
-            // PatiëntBeheerWelkomLbl
+            // label1
             // 
-            this.PatiëntBeheerWelkomLbl.AutoSize = true;
-            this.PatiëntBeheerWelkomLbl.Location = new System.Drawing.Point(16, 11);
-            this.PatiëntBeheerWelkomLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.PatiëntBeheerWelkomLbl.Name = "PatiëntBeheerWelkomLbl";
-            this.PatiëntBeheerWelkomLbl.Size = new System.Drawing.Size(312, 17);
-            this.PatiëntBeheerWelkomLbl.TabIndex = 22;
-            this.PatiëntBeheerWelkomLbl.Text = "Hier kunt u de patiënten in het systeem beheren";
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
             // 
-            // button1
+            // label2
             // 
-            this.button1.Location = new System.Drawing.Point(453, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 29);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Load Patiënts";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Name = "label3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Name = "label4";
+            // 
+            // FloorIdTBX
+            // 
+            this.FloorIdTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.FloorIdTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.FloorIdTBX, "FloorIdTBX");
+            this.FloorIdTBX.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.FloorIdTBX.Name = "FloorIdTBX";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Name = "label5";
+            // 
+            // PasswordTBX
+            // 
+            this.PasswordTBX.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.PasswordTBX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.PasswordTBX, "PasswordTBX");
+            this.PasswordTBX.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.PasswordTBX.Name = "PasswordTBX";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Name = "label6";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.PasswordTBX);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.LoadPatiens);
+            this.panel1.Controls.Add(this.RoomIdTBX);
+            this.panel1.Controls.Add(this.PatientNameTBX);
+            this.panel1.Controls.Add(this.DeletePatientTBX);
+            this.panel1.Controls.Add(this.FloorIdTBX);
+            this.panel1.Controls.Add(this.PatiëntSearchTBX);
+            this.panel1.Controls.Add(this.AddPatient);
+            this.panel1.Controls.Add(this.RemovePatient);
+            this.panel1.Controls.Add(this.SearchName);
+            this.panel1.Controls.Add(this.dataGridView1);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::IoT_Casus.Properties.Resources.Ziekenhuislogo;
+            this.pictureBox1.Image = global::IoT_Casus.Properties.Resources.Ziekenhuislogo;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(176)))));
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(176)))));
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox2);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown_1);
+            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
+            this.panel4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseUp);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::IoT_Casus.Properties.Resources.CloseButton1;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // PatiëntBeheer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 570);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.PatiëntBeheerWelkomLbl);
-            this.Controls.Add(this.VeranderPatiëntGegeven3Tbx);
-            this.Controls.Add(this.VeranderPatiëntGegeven2Tbx);
-            this.Controls.Add(this.VeranderPatiëntGegeven1Tbx);
-            this.Controls.Add(this.VeranderPatiëntGegeven4Tbx);
-            this.Controls.Add(this.PatiëntToevoegenTbx);
-            this.Controls.Add(this.VeranderenPatiëntGegevensBtn);
-            this.Controls.Add(this.VerwijderPatiëntBtn);
-            this.Controls.Add(this.ToevoegenPatiëntBtn);
-            this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(71)))));
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PatiëntBeheer";
-            this.Text = "PatiëntBeheer";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button ToevoegenPatiëntBtn;
-        private System.Windows.Forms.Button VerwijderPatiëntBtn;
-        private System.Windows.Forms.Button VeranderenPatiëntGegevensBtn;
-        private System.Windows.Forms.TextBox PatiëntToevoegenTbx;
-        private System.Windows.Forms.TextBox VeranderPatiëntGegeven4Tbx;
-        private System.Windows.Forms.TextBox VeranderPatiëntGegeven1Tbx;
-        private System.Windows.Forms.TextBox VeranderPatiëntGegeven2Tbx;
-        private System.Windows.Forms.TextBox VeranderPatiëntGegeven3Tbx;
-        private System.Windows.Forms.Label PatiëntBeheerWelkomLbl;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SearchName;
+        private System.Windows.Forms.Button RemovePatient;
+        private System.Windows.Forms.Button AddPatient;
+        private System.Windows.Forms.TextBox PatiëntSearchTBX;
+        private System.Windows.Forms.TextBox DeletePatientTBX;
+        private System.Windows.Forms.TextBox PatientNameTBX;
+        private System.Windows.Forms.TextBox RoomIdTBX;
+        private System.Windows.Forms.Button LoadPatiens;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox FloorIdTBX;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox PasswordTBX;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

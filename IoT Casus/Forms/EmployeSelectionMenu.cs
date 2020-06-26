@@ -1,5 +1,4 @@
-﻿using IoT_Casus.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,42 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IoT_Casus
+namespace IoT_Casus.Forms
 {
-    public partial class Form1 : Form
+    public partial class EmployeSelectionMenu : Form
     {
-        DAL ThisDAL = new DAL();
-
         int TogMove;
         int MValX;
         int MValY;
 
-        public Form1()
+        public EmployeSelectionMenu()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ThisDAL.RetrieveLoginUsers(textBox1.Text,textBox2.Text);
-            if (ThisDAL.SessionScreen == 1)
-            {
-                this.Hide();
-                var DeviceManagement = new DeviceManagement();
-                DeviceManagement.Show();
-            }
-            if (ThisDAL.SessionScreen == 2)
-            {
-                this.Hide();
-                var EmployeSelectionMenu = new EmployeSelectionMenu();
-                EmployeSelectionMenu.Show();
-            }
-
+            System.Windows.Forms.Application.Exit();
         }
 
         //Allows to move the page --BEGIN--
@@ -69,11 +48,18 @@ namespace IoT_Casus
         }
         //Allows to move the page --END--
 
-        //Closing button in corner to stop application
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            this.Hide();
+            var PatiëntBeheer = new PatiëntBeheer();
+            PatiëntBeheer.Show();
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var EmployeeDevices = new EmployeeDevices();
+            EmployeeDevices.Show();
+        }
     }
 }

@@ -70,6 +70,18 @@
     <Compile Include="Forms\Apparaatbeheer.Designer.cs">
       <DependentUpon>Apparaatbeheer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EmployeeDevices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeDevices.Designer.cs">
+      <DependentUpon>EmployeeDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeSelectionMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeSelectionMenu.Designer.cs">
+      <DependentUpon>EmployeSelectionMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Apparaatbeheer.resx">
       <DependentUpon>Apparaatbeheer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeDevices.resx">
+      <DependentUpon>EmployeeDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeSelectionMenu.resx">
+      <DependentUpon>EmployeSelectionMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainPage.aa.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
@@ -104,6 +122,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -118,6 +137,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ziekenhuislogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

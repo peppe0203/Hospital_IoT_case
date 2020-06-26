@@ -15,6 +15,10 @@ namespace IoT_Casus.Forms
     {
         DAL ThisDAL = new DAL();
 
+        int TogMove;
+        int MValX;
+        int MValY;
+
         public PatiëntBeheer()
         {
             InitializeComponent();
@@ -25,15 +29,15 @@ namespace IoT_Casus.Forms
             DataTable table = new DataTable();
             table.Columns.Add("userId", typeof(int));
             table.Columns.Add("userName", typeof(string));
-            table.Columns.Add("userRoleId", typeof(int));
+            //table.Columns.Add("userRoleId", typeof(int));
             table.Columns.Add("userRoomId", typeof(int));
-            table.Columns.Add("userFloorId", typeof(int));
+            //table.Columns.Add("userFloorId", typeof(int));
             table.Columns.Add("password", typeof(string));
             foreach (User User in ThisDAL.Allusers)
             {
-                table.Rows.Add(User._userId, User._userName, User._userRoleId, User._userRoomId ,User._userFloorId, User._password);
+                table.Rows.Add(User._userId, User._userName, User._userRoomId, User._password);
             }
-
+            dataGridView1.Width = 1000;
             dataGridView1.DataSource = table;
             dataGridView1.Refresh();
         }
@@ -42,6 +46,60 @@ namespace IoT_Casus.Forms
         {
             ThisDAL.RetrieveAllPatiens();
             refresh_DataGridPatiens();
+            PatiëntSearchTBX.Text = "";
         }
+
+        private void SearchName_Click(object sender, EventArgs e)
+        {
+            ThisDAL.SearchPatient(PatiëntSearchTBX.Text);
+            refresh_DataGridPatiens();
+        }
+
+        private void RemovePatient_Click(object sender, EventArgs e)
+        {
+            ThisDAL.DeletePatient(DeletePatientTBX.Text);
+            ThisDAL.RetrieveAllPatiens();
+            refresh_DataGridPatiens();
+            DeletePatientTBX.Text = "";
+        }
+
+        private void AddPatient_Click(object sender, EventArgs e)
+        {
+            ThisDAL.AddPatient(PatientNameTBX.Text, RoomIdTBX.Text, FloorIdTBX.Text, PasswordTBX.Text);
+            ThisDAL.RetrieveAllPatiens();
+            refresh_DataGridPatiens();
+            PatientNameTBX.Text = "";
+            RoomIdTBX.Text = "";
+            FloorIdTBX.Text = "";
+            PasswordTBX.Text = "";
+        }
+
+        //Allows to move the page --BEGIN--
+        private void panel4_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            TogMove = 1;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+
+        private void panel4_MouseUp(object sender, MouseEventArgs e)
+        {
+            TogMove = 0;
+        }
+
+        private void panel4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TogMove == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
+        }
+        //Allows to move the page --END--
+
+        //Closing button in corner to stop application
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }        
     }
 }

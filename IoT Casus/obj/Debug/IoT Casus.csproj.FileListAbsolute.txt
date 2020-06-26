@@ -34,25 +34,5 @@ C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.dll
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.xml
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\IoT Casus.exe.config
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\IoT Casus.exe
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\IoT Casus.pdb
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\aa\IoT Casus.resources.dll
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.dll
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\Newtonsoft.Json.dll
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.dll
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.xml
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\Newtonsoft.Json.xml
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.xml
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csprojAssemblyReference.cache
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.DeviceManagement.resources
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Form1.resources
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.PatiëntBeheer.resources
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Properties.Resources.resources
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Form1.aa.resources
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csproj.GenerateResource.cache
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csproj.CoreCompileInputs.cache
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\aa\IoT Casus.resources.dll
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csproj.CopyComplete
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.exe
-D:\Data\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.pdb
+C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.EmployeSelectionMenu.resources
+C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.EmployeeDevices.resources
