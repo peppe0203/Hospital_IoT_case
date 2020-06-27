@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using IoT_Casus.Classes;
 using System.Windows.Forms;
+using NUnit.Framework.Internal;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace IoT_Casus
 {
@@ -17,6 +19,11 @@ namespace IoT_Casus
 
         //So the program knows which view to open (1 patient, 2 worker, 0 none)
         public int SessionScreen = 0;
+        public static string PatientName;
+
+        //So it can be used in PatientDeviceView
+        public string PatienntNameView = PatientName;
+
 
         public DAL()
         {
@@ -58,6 +65,7 @@ namespace IoT_Casus
                         //Turned off because of testing
                         //MessageBox.Show("Logged in patiënt","Message");
                         SessionScreen = 1;
+                        PatientName = Allusers[0]._userName;
                     }
                     if (Allusers[0]._userRoleId == 2)
                     {
@@ -226,6 +234,37 @@ namespace IoT_Casus
                     cmd.CommandText = "select * from Devices_table inner join Rooms_table on Devices_table.roomId = Rooms_table.roomId where roomName like '%' + @roomName + '%' and deviceName like '%' + @roomNameType + '%'"; 
                     cmd.Parameters.AddWithValue("@roomName", RoomName);
                     cmd.Parameters.AddWithValue("@roomNameType", RoomNameType);
+                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            AllDevices.Add(new Device(Int32.Parse(dataReader[0].ToString()),
+                                Int32.Parse(dataReader[1].ToString()),
+                                dataReader[2].ToString(),
+                                dataReader[3].ToString(),
+                                dataReader[4].ToString(),
+                                Int32.Parse(dataReader[5].ToString())));
+                        }
+                    }
+                }
+                cnn.Close();
+            }
+        }
+
+        // Used to display all devices of the patient
+        public void RetrieveAllDevicesPatient()
+        {
+            AllDevices.Clear();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    cmd.Connection = cnn;
+                    cmd.CommandText = "Select * From Devices_table Inner join Rooms_table On Devices_table.roomId = Rooms_table.roomId " +
+                        "Inner join Users_table On Rooms_table.roomId = Users_table.userRoomId Where Users_table.userName = @UserName";
+                    cmd.Parameters.AddWithValue("@UserName", PatientName);
                     using (SqlDataReader dataReader = cmd.ExecuteReader())
                     {
                         while (dataReader.Read())
