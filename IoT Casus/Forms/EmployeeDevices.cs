@@ -104,8 +104,18 @@ namespace IoT_Casus.Forms
         {
             if (DomoticzID != null)
             {
-                Thread t3 = new Thread(tc.DeleteDeviceThread);
-                t3.Start(DomoticzID);
+                string message = "Device with ID: " + DomoticzID + " wil be deleted";
+                DialogResult dialogResult = MessageBox.Show(message, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
+                {                    
+                    Thread t3 = new Thread(tc.DeleteDeviceThread);
+                    t3.Start(DomoticzID);
+                    MessageBox.Show("Delete succesvol", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    MessageBox.Show("Delete canceled", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }                
             }
             if (DomoticzID == null)
             {

@@ -38,10 +38,12 @@ namespace IoT_Casus.Classes
 
         public void DeleteDeviceThread(object DomoticzId)
         {
+            //Delete device from db (so there wil be no conflicts between de 2 applications)
+            ThisDAL.DeleteDevice(DomoticzId);
             HttpWebRequest request =
                     WebRequest.Create("http://127.0.0.1:8080/json.htm?type=deletedevice&idx=" + DomoticzId) as HttpWebRequest;
             HttpWebResponse response = request.GetResponse() as HttpWebResponse;
-            response.Close();
+            response.Close();        
         }
 
         public void GetDataThread()

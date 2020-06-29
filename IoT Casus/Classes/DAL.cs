@@ -153,9 +153,18 @@ namespace IoT_Casus
                     cmd.Parameters.AddWithValue("@userId", UserId);
                     try
                     {
-                        cmd.ExecuteNonQuery();
-                        string message = "Patient with ID: " + UserId + " Has been deleted";
-                        MessageBox.Show(message, "Message");
+                        string message = "Patient with ID: " + UserId + " wil be deleted";
+                        DialogResult dialogResult = MessageBox.Show(message,"Warning",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Delete succesvol", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else if (dialogResult == DialogResult.No)
+                        {
+                            MessageBox.Show("Delete canceled", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        
                     }
                     catch (Exception)
                     {
@@ -276,6 +285,29 @@ namespace IoT_Casus
                                 dataReader[4].ToString(),
                                 Int32.Parse(dataReader[5].ToString())));
                         }
+                    }
+                }
+                cnn.Close();
+            }
+        }
+
+        public void DeleteDevice(object DeviceID)
+        {
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    cmd.Connection = cnn;
+                    cmd.CommandText = "DELETE FROM Devices_table WHERE domoticzId = @DomoticzId";
+                    cmd.Parameters.AddWithValue("@DomoticzId", DeviceID);
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
                     }
                 }
                 cnn.Close();
