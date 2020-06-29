@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TextBoxName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.LoadDevicesPatient = new System.Windows.Forms.Button();
@@ -35,8 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.RefreshDataGrid = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -50,21 +52,20 @@
             this.TextBoxName.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.TextBoxName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxName.ForeColor = System.Drawing.Color.White;
-            this.TextBoxName.Location = new System.Drawing.Point(432, 263);
-            this.TextBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TextBoxName.Location = new System.Drawing.Point(324, 214);
+            this.TextBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TextBoxName.Name = "TextBoxName";
-            this.TextBoxName.Size = new System.Drawing.Size(158, 19);
+            this.TextBoxName.Size = new System.Drawing.Size(118, 15);
             this.TextBoxName.TabIndex = 26;
             this.TextBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(477, 128);
+            this.dataGridView1.Size = new System.Drawing.Size(358, 104);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -74,11 +75,12 @@
             this.LoadDevicesPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LoadDevicesPatient.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadDevicesPatient.ForeColor = System.Drawing.Color.Black;
-            this.LoadDevicesPatient.Location = new System.Drawing.Point(3, 160);
+            this.LoadDevicesPatient.Location = new System.Drawing.Point(2, 130);
+            this.LoadDevicesPatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoadDevicesPatient.Name = "LoadDevicesPatient";
-            this.LoadDevicesPatient.Size = new System.Drawing.Size(149, 32);
+            this.LoadDevicesPatient.Size = new System.Drawing.Size(112, 26);
             this.LoadDevicesPatient.TabIndex = 33;
-            this.LoadDevicesPatient.Text = "Load devices";
+            this.LoadDevicesPatient.Text = "Show all";
             this.LoadDevicesPatient.UseVisualStyleBackColor = false;
             this.LoadDevicesPatient.Click += new System.EventHandler(this.LoadDevicesPatient_Click);
             // 
@@ -88,9 +90,10 @@
             this.SwitchStatusDevicePatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SwitchStatusDevicePatient.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SwitchStatusDevicePatient.ForeColor = System.Drawing.Color.Black;
-            this.SwitchStatusDevicePatient.Location = new System.Drawing.Point(195, 160);
+            this.SwitchStatusDevicePatient.Location = new System.Drawing.Point(146, 130);
+            this.SwitchStatusDevicePatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SwitchStatusDevicePatient.Name = "SwitchStatusDevicePatient";
-            this.SwitchStatusDevicePatient.Size = new System.Drawing.Size(149, 32);
+            this.SwitchStatusDevicePatient.Size = new System.Drawing.Size(112, 26);
             this.SwitchStatusDevicePatient.TabIndex = 34;
             this.SwitchStatusDevicePatient.Text = "Switch status";
             this.SwitchStatusDevicePatient.UseVisualStyleBackColor = false;
@@ -102,9 +105,10 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(467, 231);
+            this.label1.Location = new System.Drawing.Point(350, 188);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 18);
+            this.label1.Size = new System.Drawing.Size(101, 14);
             this.label1.TabIndex = 35;
             this.label1.Text = "Welcome back:";
             // 
@@ -116,34 +120,24 @@
             this.panel1.Controls.Add(this.LoadDevicesPatient);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.TextBoxName);
-            this.panel1.Location = new System.Drawing.Point(16, 17);
+            this.panel1.Location = new System.Drawing.Point(12, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(596, 301);
+            this.panel1.Size = new System.Drawing.Size(447, 245);
             this.panel1.TabIndex = 36;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(0, -4);
+            this.panel2.Location = new System.Drawing.Point(0, -3);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(626, 24);
+            this.panel2.Size = new System.Drawing.Size(470, 20);
             this.panel2.TabIndex = 37;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::IoT_Casus.Properties.Resources.CloseButton1;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(581, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button3
             // 
@@ -155,25 +149,43 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(2, -3);
+            this.button3.Location = new System.Drawing.Point(2, -2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 30);
+            this.button3.Size = new System.Drawing.Size(111, 24);
             this.button3.TabIndex = 38;
             this.button3.Text = "<---- Log out";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::IoT_Casus.Properties.Resources.CloseButton1;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(436, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 18);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // RefreshDataGrid
+            // 
+            this.RefreshDataGrid.Interval = 5000;
+            this.RefreshDataGrid.Tick += new System.EventHandler(this.RefreshDataGrid_Tick);
+            // 
             // PatientDevice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(71)))));
-            this.ClientSize = new System.Drawing.Size(628, 336);
+            this.ClientSize = new System.Drawing.Size(471, 273);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(85, 80);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PatientDevice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Apparaatbeheer";
@@ -197,5 +209,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Timer RefreshDataGrid;
     }
 }

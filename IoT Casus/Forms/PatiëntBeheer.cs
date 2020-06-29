@@ -46,13 +46,17 @@ namespace IoT_Casus.Forms
         {
             ThisDAL.RetrieveAllPatiens();
             refresh_DataGridPatiens();
-            PatiëntSearchTBX.Text = "";
+            RefreshDataGrid.Enabled = true;
+            RefreshDataGridSearch.Enabled = false;
         }
 
         private void SearchName_Click(object sender, EventArgs e)
         {
+
             ThisDAL.SearchPatient(PatiëntSearchTBX.Text);
             refresh_DataGridPatiens();
+            RefreshDataGridSearch.Enabled = true;
+            RefreshDataGrid.Enabled = false;
         }
 
         private void RemovePatient_Click(object sender, EventArgs e)
@@ -108,6 +112,23 @@ namespace IoT_Casus.Forms
             var EmployeSelectionMenu = new EmployeSelectionMenu();
             EmployeSelectionMenu.Show();
             WindowState = FormWindowState.Normal;
+            RefreshDataGrid.Enabled = false;
+        }
+
+        private void RefreshDataGrid_Tick(object sender, EventArgs e)
+        {
+            ThisDAL.RetrieveAllPatiens();
+            int index = dataGridView1.CurrentRow.Index;
+            refresh_DataGridPatiens();
+            dataGridView1.FirstDisplayedScrollingRowIndex = index;
+        }
+
+        private void RefreshDataGridSearch_Tick(object sender, EventArgs e)
+        {
+            ThisDAL.SearchPatient(PatiëntSearchTBX.Text);
+            int index = dataGridView1.CurrentRow.Index;
+            refresh_DataGridPatiens();
+            dataGridView1.FirstDisplayedScrollingRowIndex = index;
         }
     }
 }

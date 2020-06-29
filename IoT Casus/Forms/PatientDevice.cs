@@ -77,9 +77,10 @@ namespace IoT_Casus.Forms
         }
 
         private void LoadDevicesPatient_Click(object sender, EventArgs e)
-        {            
+        {
             ThisDAL.RetrieveAllDevicesPatient();
             refresh_DataGridDevicesPatient();
+            RefreshDataGrid.Enabled = true;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -153,6 +154,15 @@ namespace IoT_Casus.Forms
             var MainPage = new Form1();
             MainPage.Show();
             WindowState = FormWindowState.Normal;
+            RefreshDataGrid.Enabled = false;
+        }
+
+        private void RefreshDataGrid_Tick(object sender, EventArgs e)
+        {
+            ThisDAL.RetrieveAllDevicesPatient();
+            int index = dataGridView1.CurrentRow.Index;
+            refresh_DataGridDevicesPatient();
+            dataGridView1.FirstDisplayedScrollingRowIndex = index;
         }
     }
 }
