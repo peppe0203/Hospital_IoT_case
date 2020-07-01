@@ -54,12 +54,17 @@ namespace IoT_Casus.Forms
         {
             ThisDAL.RetrieveAllDevicesEmploye();
             refresh_DataGridDevices();
+            RefreshDataGrid.Enabled = true;
+            RefreshDataGridSearch.Enabled = false;
         }
 
         private void SearchByRoom_Click(object sender, EventArgs e)
         {
-            ThisDAL.SearchDeviceByRoom(SearchByRoomTBX.Text,DropDownMenuTypes.Text);
+
+            ThisDAL.SearchDeviceByRoom(SearchByRoomTBX.Text, DropDownMenuTypes.Text);
             refresh_DataGridDevices();
+            RefreshDataGridSearch.Enabled = true;
+            RefreshDataGrid.Enabled = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -156,6 +161,23 @@ namespace IoT_Casus.Forms
             var EmployeSelectionMenu = new EmployeSelectionMenu();
             EmployeSelectionMenu.Show();
             WindowState = FormWindowState.Normal;
+            RefreshDataGrid.Enabled = false;
+        }
+
+        private void RefreshDataGrid_Tick(object sender, EventArgs e)
+        {
+            ThisDAL.RetrieveAllDevicesEmploye();
+            int index = dataGridView1.CurrentRow.Index;
+            refresh_DataGridDevices();
+            dataGridView1.FirstDisplayedScrollingRowIndex = index;
+        }
+
+        private void RefreshDataGridSearch_Tick_1(object sender, EventArgs e)
+        {
+            ThisDAL.SearchDeviceByRoom(SearchByRoomTBX.Text, DropDownMenuTypes.Text);
+            int index = dataGridView1.CurrentRow.Index;
+            refresh_DataGridDevices();
+            dataGridView1.FirstDisplayedScrollingRowIndex = index;
         }
     }
 }
