@@ -3,7 +3,6 @@ D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus
 D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.PatiëntBeheer.resources
 D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Properties.Resources.resources
 D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csproj.GenerateResource.cache
-D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.DeviceManagement.resources
 D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\IoT Casus.exe.config
 D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\IoT Casus.exe
 D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\IoT Casus.pdb
@@ -18,8 +17,6 @@ C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\IoT Casus.pdb
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\aa\IoT Casus.resources.dll
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\Newtonsoft.Json.dll
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\Newtonsoft.Json.xml
-C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csprojAssemblyReference.cache
-C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.DeviceManagement.resources
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Form1.resources
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.PatiëntBeheer.resources
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Properties.Resources.resources
@@ -36,3 +33,20 @@ C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.xml
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.EmployeSelectionMenu.resources
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.EmployeeDevices.resources
+C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.PatientDevice.resources
+C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\nunit.framework.dll
+C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\nunit.framework.pdb
+C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\nunit.framework.xml
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\aa\IoT Casus.resources.dll
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\nunit.framework.dll
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.dll
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\nunit.framework.pdb
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\nunit.framework.xml
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\bin\Debug\System.IO.Packaging.xml
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.PatientDevice.resources
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.EmployeeDevices.resources
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.EmployeSelectionMenu.resources
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Form1.aa.resources
+D:\Bibliotheek\Documenten\GitHub\Hospital_IoT_case\IoT Casus\obj\Debug\aa\IoT Casus.resources.dll

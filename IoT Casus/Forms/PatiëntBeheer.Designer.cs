@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatiëntBeheer));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SearchName = new System.Windows.Forms.Button();
@@ -51,7 +52,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.RefreshDataGrid = new System.Windows.Forms.Timer(this.components);
+            this.RefreshDataGridSearch = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -230,12 +234,25 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.pictureBox2);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown_1);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
             this.panel4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseUp);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(71)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(71)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(71)))));
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
@@ -244,6 +261,16 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // RefreshDataGrid
+            // 
+            this.RefreshDataGrid.Interval = 5000;
+            this.RefreshDataGrid.Tick += new System.EventHandler(this.RefreshDataGrid_Tick);
+            // 
+            // RefreshDataGridSearch
+            // 
+            this.RefreshDataGridSearch.Interval = 5000;
+            this.RefreshDataGridSearch.Tick += new System.EventHandler(this.RefreshDataGridSearch_Tick);
             // 
             // PatiëntBeheer
             // 
@@ -290,5 +317,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Timer RefreshDataGrid;
+        private System.Windows.Forms.Timer RefreshDataGridSearch;
     }
 }
