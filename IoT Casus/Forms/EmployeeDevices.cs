@@ -175,9 +175,16 @@ namespace IoT_Casus.Forms
         private void RefreshDataGridSearch_Tick_1(object sender, EventArgs e)
         {
             ThisDAL.SearchDeviceByRoom(SearchByRoomTBX.Text, DropDownMenuTypes.Text);
-            int index = dataGridView1.CurrentRow.Index;
-            refresh_DataGridDevices();
-            dataGridView1.FirstDisplayedScrollingRowIndex = index;
+            try
+            {                
+                int index = dataGridView1.CurrentRow.Index;
+                refresh_DataGridDevices();
+                dataGridView1.FirstDisplayedScrollingRowIndex = index;
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine(ex);
+            }
         }
     }
 }

@@ -125,10 +125,18 @@ namespace IoT_Casus.Forms
 
         private void RefreshDataGridSearch_Tick(object sender, EventArgs e)
         {
-            ThisDAL.SearchPatient(PatiëntSearchTBX.Text);
-            int index = dataGridView1.CurrentRow.Index;
-            refresh_DataGridPatiens();
-            dataGridView1.FirstDisplayedScrollingRowIndex = index;
+            try
+            {
+                ThisDAL.SearchPatient(PatiëntSearchTBX.Text);
+                int index = dataGridView1.CurrentRow.Index;
+                refresh_DataGridPatiens();
+                dataGridView1.FirstDisplayedScrollingRowIndex = index;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
         }
     }
 }

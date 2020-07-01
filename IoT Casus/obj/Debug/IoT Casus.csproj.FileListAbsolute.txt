@@ -17,7 +17,6 @@ C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\IoT Casus.pdb
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\aa\IoT Casus.resources.dll
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\Newtonsoft.Json.dll
 C:\Github\Hospital_IoT_case\IoT Casus\bin\Debug\Newtonsoft.Json.xml
-C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT Casus.csprojAssemblyReference.cache
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Form1.resources
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Forms.PatiëntBeheer.resources
 C:\Github\Hospital_IoT_case\IoT Casus\obj\Debug\IoT_Casus.Properties.Resources.resources
