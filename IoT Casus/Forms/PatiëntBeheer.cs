@@ -46,17 +46,13 @@ namespace IoT_Casus.Forms
         {
             ThisDAL.RetrieveAllPatiens();
             refresh_DataGridPatiens();
-            RefreshDataGrid.Enabled = true;
-            RefreshDataGridSearch.Enabled = false;
+            PatiëntSearchTBX.Text = "";
         }
 
         private void SearchName_Click(object sender, EventArgs e)
         {
-
             ThisDAL.SearchPatient(PatiëntSearchTBX.Text);
             refresh_DataGridPatiens();
-            RefreshDataGridSearch.Enabled = true;
-            RefreshDataGrid.Enabled = false;
         }
 
         private void RemovePatient_Click(object sender, EventArgs e)
@@ -104,39 +100,6 @@ namespace IoT_Casus.Forms
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var EmployeSelectionMenu = new EmployeSelectionMenu();
-            EmployeSelectionMenu.Show();
-            WindowState = FormWindowState.Normal;
-            RefreshDataGrid.Enabled = false;
-        }
-
-        private void RefreshDataGrid_Tick(object sender, EventArgs e)
-        {
-            ThisDAL.RetrieveAllPatiens();
-            int index = dataGridView1.CurrentRow.Index;
-            refresh_DataGridPatiens();
-            dataGridView1.FirstDisplayedScrollingRowIndex = index;
-        }
-
-        private void RefreshDataGridSearch_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                ThisDAL.SearchPatient(PatiëntSearchTBX.Text);
-                int index = dataGridView1.CurrentRow.Index;
-                refresh_DataGridPatiens();
-                dataGridView1.FirstDisplayedScrollingRowIndex = index;
-            }
-            catch (Exception ex)
-            {
-
-            }
-            
-        }
+        }        
     }
 }

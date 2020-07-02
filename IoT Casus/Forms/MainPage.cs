@@ -1,5 +1,4 @@
-﻿using DocumentFormat.OpenXml.Wordprocessing;
-using IoT_Casus.Forms;
+﻿using IoT_Casus.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +19,6 @@ namespace IoT_Casus
         int MValX;
         int MValY;
 
-
         public Form1()
         {
             InitializeComponent();
@@ -37,8 +35,8 @@ namespace IoT_Casus
             if (ThisDAL.SessionScreen == 1)
             {
                 this.Hide();
-                var patientDevice = new PatientDevice();
-                patientDevice.Show();
+                var DeviceManagement = new DeviceManagement();
+                DeviceManagement.Show();
             }
             if (ThisDAL.SessionScreen == 2)
             {
